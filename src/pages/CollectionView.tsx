@@ -21,7 +21,7 @@ interface Collection {
   items: Product[];
 }
 
-const OPERATIONS_NUMBER = "918238443377";
+const OPERATIONS_NUMBER = "918238443388";
 
 const CollectionView = () => {
   const { id } = useParams<{ id: string }>();
