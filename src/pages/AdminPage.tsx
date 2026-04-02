@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { CloudUpload, RefreshCw, AlertCircle, PackageSearch, ShieldCheck, Edit2, Trash2, Plus, Check } from 'lucide-react';
+import { CloudUpload, RefreshCw, AlertCircle, PackageSearch, ShieldCheck, Edit2, Trash2, Plus } from 'lucide-react';
 import { Button, Badge } from '../components/ui';
 import { Modal } from '../components/Modal';
 import collection1Data from '../data/collection-1.json';
