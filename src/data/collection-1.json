@@ -1,0 +1,27 @@
+{
+  "id": "collection-1",
+  "name": "Spring 2026 Collection",
+  "items": [
+    {
+      "sku": "S26-001",
+      "name": "Floral Summer Dress",
+      "price": 2500,
+      "inStock": true,
+      "image": "v1234567/floral-dress"
+    },
+    {
+      "sku": "S26-002",
+      "name": "Linen Beach Shirt",
+      "price": 1800,
+      "inStock": true,
+      "image": "v1234567/linen-shirt"
+    },
+    {
+      "sku": "S26-003",
+      "name": "Classic Denim Jacket",
+      "price": 3200,
+      "inStock": false,
+      "image": "v1234567/denim-jacket"
+    }
+  ]
+}
