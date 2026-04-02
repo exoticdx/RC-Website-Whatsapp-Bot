@@ -1,6 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import axios from 'axios';
-import collection1Data from '../src/data/collection-1.json';
+import * as fs from 'fs';
+import * as path from 'path';
 
 // These should be set in your Vercel Environment Variables
 const WHATSAPP_TOKEN = process.env.WHATSAPP_TOKEN;
@@ -49,7 +50,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
             // Here we check the live stock (assuming collection-1 for now)
             if (collectionId === 'collection-1') {
-              const inStockItems = collection1Data.items.filter(item => item.inStock);
+              const dataPath = path.join(process.cwd(), 'src', 'data', 'collection-1.json');
+              const fileContent = fs.readFileSync(dataPath, 'utf-8');
+              const collection1Data = JSON.parse(fileContent);
+              
+              const inStockItems = collection1Data.items.filter((item: any) => item.inStock);
               
               const replyText = `Here is your requested catalog for *${collection1Data.name}*!\n\nCurrently, we have ${inStockItems.length} items in stock.\n\n` +
                                 inStockItems.map(item => `- *${item.name}* (SKU: ${item.sku}) - ₹${item.price}`).join('\n') +
