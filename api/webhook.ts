@@ -4,9 +4,9 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 // These should be set in your Vercel Environment Variables
-const WHATSAPP_TOKEN = process.env.WHATSAPP_TOKEN;
-const PHONE_NUMBER_ID = process.env.PHONE_NUMBER_ID;
-const VERIFY_TOKEN = process.env.VERIFY_TOKEN;
+const WHATSAPP_TOKEN = (process.env.WHATSAPP_TOKEN || '').trim();
+const PHONE_NUMBER_ID = (process.env.PHONE_NUMBER_ID || '').trim();
+const VERIFY_TOKEN = (process.env.VERIFY_TOKEN || '').trim();
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   // 1. Webhook Verification (Meta requires this when you set up the webhook)
