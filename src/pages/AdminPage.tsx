@@ -20,8 +20,8 @@ interface Collection {
 }
 
 const GITHUB_CONFIG = {
-  owner: 'YOUR_GITHUB_USERNAME', // Users will change these manually as instructed before
-  repo: 'YOUR_REPO_NAME',
+  owner: 'exoticdx',
+  repo: 'RC-Website-Whatsapp-Bot',
   path: 'src/data/collection-1.json',
   branch: 'main'
 };
